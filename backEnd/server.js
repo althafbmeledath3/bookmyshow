@@ -62,6 +62,55 @@ app.get('/loadData',async(req,res)=>{
 })
 
 
+//send preview and all details to frontend
+app.get('/loadPreview/:id',async(req,res)=>{
+
+    try{
+        const movieId = req.params.id
+        //now find the id and send data
+        const data = await movieSchema.findById(movieId)
+        res.status(200).send(JSON.stringify(data))
+
+    }
+    catch(err){
+        res.status(500).json({error:err})
+    }
+    
+
+})
+
+//function to edit movie
+app.post('/editMovie/:id', async (req, res) => {
+    
+    try {
+        const updatedMovie = await movieSchema.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        );
+        res.status(201).json(updatedMovie);
+    } catch (error) {
+        res.status(500).json({ error: "Error updating movie" });
+    }
+});
+
+//function to delete movie
+app.get('/delete/:id',async(req,res)=>{
+    try{
+
+        const movie_id = req.params.id
+        const deleteMovie = await movieSchema.findByIdAndDelete(movie_id)
+        res.status(200).json('Movie Deleted Success')
+
+    }
+    catch(err){
+        res.status(500).send({error:err})
+    }
+    
+
+})
+
+
 
 //first connect database then run the server
 connection().then(()=>{

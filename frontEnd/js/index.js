@@ -11,7 +11,7 @@ async function loadData(){
         data.forEach(element => {
 
             str1+=`
-            <a href="movie_preview.html"><div class="card">
+            <a href="movie_preview.html?id=${element._id}"><div class="card">
             <img src=${element.poster}></img><p>${element.name}</p>
             <span >${element.categories.join("/")}</span></div></a>
             `

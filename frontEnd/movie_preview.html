@@ -6,6 +6,7 @@
   <title>BookMyShow | Movie Preview</title>
   <link rel="stylesheet" href="css/preview.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="js/preview.js" defer></script>
 </head>
 <body>
 
@@ -51,10 +52,10 @@
   </div>
 
   <!-- Movie Preview Section -->
-  <div class="preview-section">
+  <div class="preview-section" id="preview-section">
     <div class="preview-overlay">
       <div class="preview-container">
-        <div class="poster">
+        <div class="poster" id="poster">
           <img src="/images/empuraan-poster.jpeg" alt="Movie Poster">
           <div class="play-button">▶️ Trailers (7)</div>
           <p>In cinemas</p>
@@ -71,7 +72,9 @@
             <span>Malayalam, Hindi, Kannada, Tamil, Telugu</span>
             <span>2h 59m • Action, Crime, Thriller • UA16+ • 27 Mar, 2025</span>
           </div>
-          <button class="book-btn">Book tickets</button>
+          <div class="btn" id="btn">
+              
+        </div>
         </div>
       </div>
     </div>

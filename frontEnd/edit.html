@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets, Plays, Sports, Events & Cinemas near Kochi - BookMyShow Kochi.</title>
+    <link rel="stylesheet" href="css/movieAdd.css">
+   
+    <!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="js/edit.js"></script>
+
+</head>
+<body>
+    
+    <form action="" id="myForm">
+        <!-- input movie -->
+       <label for="name">Name :</label>
+       <input type="text" name="name" id="name">
+       <br>
+       <!-- input Screen -->
+       <label for="">Screen: </label>
+       <!-- <input type="text" name="screen" id="screen"> -->
+        <input type="checkbox" name="2k" id="2k" value="2K"><label for="2k">2K Digital</label>
+        <input type="checkbox" name="4k" id="4k" value="4K"><label for="4k">4K Digital</label>
+        <input type="checkbox" name="imax" id="imax" value="imax"><label for="imax">IMAX</label>
+       
+       
+       <br>
+       <!-- input language -->
+       <label for="language">Language :</label>
+       <!-- <input type="text" name="language" id="language"> -->
+        <input type="checkbox" name="malayalam" id="malayalam" value="malayalam"><label for="malayalam">Malayalam</label>
+        <input type="checkbox" name="english" id="english" value="english"><label for="english">English</label>
+        <input type="checkbox" name="tamil" id="tamil" value="tamil"><label for="tamil">Tamil</label>
+        <input type="checkbox" name="hindi" id="hindi" value="hindi"><label for="hindi">Hindi</label>
+        <input type="checkbox" name="telugu" id="telugu" value="telugu"><label for="telugu">Telugu</label>
+        <input type="checkbox" name="kannada" id="kannada" value="kannada"><label for="kannada">Kannada</label>
+       <br>
+
+       <!-- duration -->
+       <label for="timePicker">Select Duration:</label>
+       <input type="text" id="timePicker" placeholder="Select time" />
+
+       <br>
+       <!-- category -->
+       <label for="category">Catergory :</label>
+       
+       <input type="checkbox" name="category" id="action" value="Action">
+       <label for="action">Action</label>
+       
+       
+       <input type="checkbox" name="category" id="comedy" value="Comedy">
+       <label for="comedy">Comedy</label>
+       
+      
+       <input type="checkbox" name="category" id="drama" value="Drama">
+       <label for="drama">Drama</label>
+       
+       
+       <input type="checkbox" name="category" id="sci-fi" value="Sci-Fi">
+       <label for="sci-fi">Sci-Fi</label>
+       
+       
+       <input type="checkbox" name="category" id="thriller" value="Thriller">
+       <label for="thriller">Thriller</label>
+       
+       <br>
+       <!-- certificate -->
+       <label for="">Certificate: </label>
+       <!-- <input type="text" name="certificate" id="certificate"> -->
+        <select name="certificate" id="certificate">
+           <option value="" hidden>Select</option>
+           <option value="U">U</option>
+           <option value="U/A">U/A</option>
+           <option value="A">A</option>
+        </select>
+        
+       
+       
+       <br>
+       <label for="releaseDate">Release Date :</label>
+       <input type="date" name="releaseDate" id="releaseDate">
+       <br>
+       <label for="poster">Poster :</label>
+       <input type="file" name="poster" id="poster">
+       <div class="posterPreview" id="posterPreview"></div>
+       <br>
+       <label for="banner">Banner :</label>
+       <input type="file" name="banner" id="banner">
+       <div class="bannerPreview" id="bannerPreview"></div>
+       <br>
+       <button type="submit">Submit</button>
+    </form>
+    <script>
+        flatpickr("#timePicker", {
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+          time_24hr: true,
+          minTime: "01:00",
+          maxTime: "03:00",
+          defaultDate: "01:00"
+        });
+      </script>
+      
+
+</body>
+</html>
