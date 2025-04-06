@@ -232,6 +232,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
         console.log(content)
         if(res.status==201){
             alert("Movie Updated SuccessFully")
+            window.location.href = "/"
         }
         else{
             alert("Some Error updating movie")

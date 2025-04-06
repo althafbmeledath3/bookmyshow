@@ -1,90 +1,98 @@
-/* Reset and Base Styles */
 * {
-    box-sizing: border-box;
-  }
-  
-  body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #f8f9fa;
-    max-width: 100%;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
   }
   
   /* Navbar */
   .navbar {
-    padding: 20px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 15px 5%;
     background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
-  .navbar img {
+  .logo {
     height: 40px;
   }
   
-  /* Search Bar */
   .search-wrapper {
-    position: relative;
-    flex: 1 1 100%;
-    max-width: 600px;
-    margin: 10px 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    background-color: #f1f1f1;
+    padding: 6px 12px;
+    border-radius: 20px;
   }
   
   .search-wrapper i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 10px;
     color: #888;
-    pointer-events: none;
   }
   
   .movieBar {
     width: 100%;
-    padding: 10px 10px 10px 40px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .signin {
+    background-color: #f84565;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
   }
   
   /* Hamburger */
   .hamburger {
-    width: 30px;
-    height: 22px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 4px;
+    margin-left: 50px;
     cursor: pointer;
   }
   
   .hamburger span {
-    height: 4px;
-    background: #333;
-    border-radius: 10px;
+    width: 22px;
+    height: 2px;
+    background: black;
   }
   
-  /* Sign In Button */
-  .signin {
-    background-color: #f84565;
-    color: white;
-    border: none;
-    height: 36px;
-    width: 100px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  /* Under nav */
+  .under {
+    padding: 10px 5%;
+    background-color: #fff;
   }
   
-  .signin:hover {
-    background-color: #d5304e;
+  .paras {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #444;
   }
+  
+  .paras span {
+    margin-right: 10px;
+  }
+  
   
   /* Under Section */
   .under {
@@ -124,10 +132,11 @@
   }
   
   .cardSection > span {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 600;
     display: block;
     margin-bottom: 20px;
+    margin-left: 122px;
   }
   
   /* Cards */
@@ -168,49 +177,11 @@
   
   .card span {
     margin: 0 10px 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: gray;
   }
   
   /* Responsive Media Queries */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .signin {
-      align-self: flex-start;
-    }
-  
-    .paras {
-      flex-direction: column;
-      gap: 15px;
-      text-align: center;
-    }
-  
-    .cardSection > span {
-      text-align: center;
-    }
-  
-    .card {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .movieBar {
-      font-size: 14px;
-      padding: 8px 8px 8px 35px;
-    }
-  
-    .signin {
-      width: 100%;
-    }
-  
-    .search-wrapper {
-      max-width: 100%;
-    }
-  }
-  
+ /* Responsive Media Queries */
+
+/* Tablet Screens */

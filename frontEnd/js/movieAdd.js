@@ -121,6 +121,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
         console.log(res)
         if(res.status==201){
             alert("Data Added Successfully")
+            window.location.href = "/"
         }
         else{
             alert("Some Error")
