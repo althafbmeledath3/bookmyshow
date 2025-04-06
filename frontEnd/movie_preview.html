@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookMyShow | Movie Preview</title>
+  <link rel="stylesheet" href="css/preview.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="/images/81131667-297e-48ef-baf8-aa8dbbc595d3.svg" alt="Logo" class="logo" />
+
+    <div class="search-wrapper">
+      <i class="fas fa-search"></i>
+      <input
+        type="text"
+        placeholder="Search for Movies, Events, Plays, Sports and Activities"
+        class="movieBar"
+      />
+    </div>
+
+    <a href="movieAdd.html"><button class="signin">Add Movie</button></a>
+
+    <div class="hamburger" onclick="this.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Navigation Options -->
+  <div class="under">
+    <div class="paras">
+      <div class="para1">
+        <span>Movies</span>
+        <span>Stream</span>
+        <span>Events</span>
+        <span>Place</span>
+        <span>Sports</span>
+        <span>Activities</span>
+      </div>
+      <div class="para2">
+        <span>ListYourShow</span>
+        <span>Corporates</span>
+        <span>Offers</span>
+        <span>Gift Cards</span>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <!-- Movie Preview Section -->
+  <div class="preview-section">
+    <div class="preview-overlay">
+      <div class="preview-container">
+        <div class="poster">
+          <img src="/images/empuraan-poster.jpeg" alt="Movie Poster">
+          <div class="play-button">▶️ Trailers (7)</div>
+          <p>In cinemas</p>
+        </div>
+
+        <div class="movie-info">
+          <h1>L2: Empuraan</h1>
+          <div class="rating">
+            <span>⭐ 8.1/10 (103K Votes)</span>
+            <button class="rate-btn">Rate now</button>
+          </div>
+          <div class="tags">
+            <span>2D, IMAX 2D</span>
+            <span>Malayalam, Hindi, Kannada, Tamil, Telugu</span>
+            <span>2h 59m • Action, Crime, Thriller • UA16+ • 27 Mar, 2025</span>
+          </div>
+          <button class="book-btn">Book tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Movie -->
+  <div class="about-movie">
+    <h2>About the movie</h2>
+    <p>
+      Five years after the revelation of the Khureshi-Ab`Raam nexus, the land in particular and the world, in general, is caught in yet another epoch-defining socio-political storm.
+    </p>
+    <p>
+      God`s Own Country is now a land of dangerous unpredictabilities, with multiple forces trying to impact upon and dictate its political plate tectonics.
+    </p>
+  </div>
+
+</body>
+</html>

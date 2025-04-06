@@ -1,0 +1,216 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+  }
+  
+  .navbar img {
+    height: 40px;
+  }
+  
+  /* Search Bar */
+  .search-wrapper {
+    position: relative;
+    flex: 1 1 100%;
+    max-width: 600px;
+    margin: 10px 0;
+  }
+  
+  .search-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+  
+  .movieBar {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 4px;
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  /* Sign In Button */
+  .signin {
+    background-color: #f84565;
+    color: white;
+    border: none;
+    height: 36px;
+    width: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin:hover {
+    background-color: #d5304e;
+  }
+  
+  /* Under Section */
+  .under {
+    width: 100%;
+    padding: 30px 5%;
+    background-color: #f4f5f4;
+  }
+  
+  .paras {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .para1 span,
+  .para2 span {
+    margin: 0 15px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .para1 span:hover,
+  .para2 span:hover {
+    color: #f84565;
+  }
+  
+  hr {
+    margin: 10px 0;
+    border-color: #ccc;
+  }
+  
+  /* Card Section */
+  .cardSection {
+    padding: 20px 0;
+  }
+  
+  .cardSection > span {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Keeps 230x345 ratio */
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .card p {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card span {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .signin {
+      align-self: flex-start;
+    }
+  
+    .paras {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  
+    .cardSection > span {
+      text-align: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movieBar {
+      font-size: 14px;
+      padding: 8px 8px 8px 35px;
+    }
+  
+    .signin {
+      width: 100%;
+    }
+  
+    .search-wrapper {
+      max-width: 100%;
+    }
+  }
+  

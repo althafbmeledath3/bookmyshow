@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="navbar">
+            <img src="/images/81131667-297e-48ef-baf8-aa8dbbc595d3.svg" alt="">
+            <!-- search bar -->
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  placeholder="   Search for Movies, Events, Plays, Sports and Activities"
+                  id="movieBar"
+                  class="movieBar"
+                />
+              </div>
+              
+            
+            <!-- HTML -->
+        <a href="movieAdd.html"><button class="signin">Add Movie</button></a>
+        <div class="hamburger" onclick="this.classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+  
+
+        </div>
+
+        <!-- under section -->
+         <div class="under">
+           
+            <div class="paras">
+                <div class="para1">
+
+                    <span>Movies</span>
+                    <span>Stream</span>
+                    <span>Events</span>
+                    <span>Place</span>
+                    <span>Sports</span>
+                    <span>Activities</span>
+                </div>
+                <div class="para2">
+                    <span>ListYourShow</span>
+                    <span>Corporates</span>
+                    <span>Offers</span>
+                    <span>Gift Cards</span>
+                </div>
+            </div>
+            <hr>
+
+            <!-- cards movie section -->
+            <div class="cardSection">
+                <span>Recommended Movies</span>
+                <div class="cards" id="cards">
+                    <div class="card">
+                      
+                    </div>
+                    <!-- More cards dynamically -->
+                  </div>
+                  
+            </div>
+         </div>
+         <a href="movie_preview.html">preview</a>
+    </div>
+
+    
+    
+</body>
+</html>
