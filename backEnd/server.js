@@ -32,6 +32,8 @@ app.post('/addMovie',async (req,res)=>{
         const { name, screens, languages, duration, certificate, categories, releaseDate, poster, banner } = req.body
         console.log("Data Recieved",name, screens, languages, duration, certificate, categories, releaseDate, poster, banner)
 
+       
+
         //check error
         if (!name || !screens || !languages || !duration || !certificate || !categories || !releaseDate || !poster || !banner) {
             return res.status(404).send({ error: "please fill all fields" })
