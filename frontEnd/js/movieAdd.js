@@ -102,8 +102,11 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
             categories.push(c[i].value)
         }
     }
+    if(languages.length==0){
+        alert("Language cannot be null")
+        return
+    }
     
-
     var data = {name,screens,languages,duration,categories,certificate,releaseDate,poster,banner}
 
 
