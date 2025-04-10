@@ -17,7 +17,6 @@ document.getElementById('banner').addEventListener('change',async(e)=>{
     document.getElementById('bannerPreview').innerHTML = `<img width="200px" height="200px" src=${banner}></img>`
 })
 
-
 //function to convert image to base64
 function convertBase64(file){
 
@@ -109,7 +108,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
     
     var data = {name,screens,languages,duration,categories,certificate,releaseDate,poster,banner}
 
-
+    console.log("data",data)
 
     try{
 
@@ -119,7 +118,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
             method:"POST",
             body:JSON.stringify(data)
         }
-        const res = await fetch("/addMovie",options)
+        const res = await fetch("/api/addMovie",options)
         let content  = await res.json()
         console.log(res)
         if(res.status==201){
@@ -127,7 +126,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
             window.location.href = "/"
         }
         else{
-            alert("Some Error")
+            alert("Please fil all the fileds")
             console.log(content.error)
         }
     }

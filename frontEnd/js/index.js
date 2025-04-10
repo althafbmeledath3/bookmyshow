@@ -1,12 +1,15 @@
-//movie card
+// movie card
 let card = document.getElementById('cards')
 let str1 = ""
+
+
+
 
 async function loadData(){
     
     try{
 
-        const res = await fetch("/loadData")
+        const res = await fetch("/api/loadData")
         const data = await res.json()
         data.forEach(element => {
 
@@ -22,7 +25,8 @@ async function loadData(){
         
     }
     catch(error){
-        console.log(error)
+        alert("error loading data")
+        console.log(data.error)
     }
 }
 
@@ -30,7 +34,7 @@ async function loadData(){
 loadData()
 
 
-//movieBar
+// movieBar
 
 
 

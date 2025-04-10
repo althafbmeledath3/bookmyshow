@@ -16,7 +16,7 @@ async function load_preview(){
    
 
     try{
-        const res = await fetch(`/loadPreview/${movieId}`);
+        const res = await fetch(`/api/loadPreview/${movieId}`);
         const data = await res.json();
         console.log(data);
         poster.innerHTML = `<img src="${data.poster}" alt="Movie Poster"><p>In cinemas</p>`
@@ -64,7 +64,7 @@ window.deleteMovie = async function(id) {
     }
 
     try {
-        const res = await fetch(`/delete/${id}`);
+        const res = await fetch(`/api/deleteMovie/${id}`);
         if (res.status === 200) {
             alert("Movie Deleted Successfully");
             window.location.href = "/";

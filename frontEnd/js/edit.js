@@ -16,7 +16,7 @@ load_initial(movieId)
 //call the api to get the current movie detials
 async function load_initial(id){
     try{
-        const res = await fetch(`/loadPreview/${id}`)
+        const res = await fetch(`/api/loadPreview/${id}`)
         const data = await res.json()
 
         //assign the movie_id_database
@@ -227,7 +227,7 @@ document.getElementById('myForm').addEventListener('submit',async(e)=>{
             method:"POST",
             body:JSON.stringify(data)
         }
-        const res = await fetch(`/editMovie/${movie_id_database}`,options)
+        const res = await fetch(`/api/editMovie/${movie_id_database}`,options)
         let content  = await res.json()
         console.log(content)
         if(res.status==201){
