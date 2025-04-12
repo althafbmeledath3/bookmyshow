@@ -1,6 +1,6 @@
 import { response } from "express"
 import userSchema from "../models/user.models.js"
-
+import bcrypt from "bcrypt"
 
 export const signIn =  async function signIn(req,res) {
 
@@ -12,10 +12,20 @@ export const signIn =  async function signIn(req,res) {
             return res.status(400).send("Enter full details")
         }
 
-        const data = await userSchema.create(req.body)
+        bcrypt.hash(password,10).then(async(hashed_pwd)=>{
 
-        console.log(req.body)
-        res.status(201).send(data)
+            console.log(req.body)
+            console.log(hashed_pwd)
+
+            const data = await userSchema.create({name,email,phone,password:hashed_pwd})
+
+            
+            res.status(201).send(data)
+        })
+
+
+
+        
         
     }
 
@@ -38,7 +48,7 @@ export const getUsers = async function getUsers(req,res){
             return res.status(404).json({message:"User Not Found"})
         }
         
-        console.log("fsdfsdf",data)
+        console.log("Logged In",data)
         res.status(200).send(data)
     }
     catch(err){
