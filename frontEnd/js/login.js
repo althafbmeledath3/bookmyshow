@@ -27,7 +27,6 @@ async function logIn(event) {
         if(response.status==200){
            
             localStorage.setItem("username",email)
-            
             console.log(data.message)
             alert(data.message)
             window.location.href = "/"
