@@ -1,10 +1,10 @@
 
 
-async function signIn(event) {
+async function signUp(event) {
 
     event.preventDefault();
 
-    let name = document.getElementById('username').value
+    let username = document.getElementById('username').value
 
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
@@ -18,7 +18,10 @@ async function signIn(event) {
         return
     }
 
-    let data = {name,email,phone,password}
+    let data = {username,email,phone,password}
+
+
+    console.log(data)
 
     let options = {
         headers:{"Content-Type":"application/json"},
@@ -28,7 +31,7 @@ async function signIn(event) {
 
    try{
 
-    const res = await fetch('/api/signin',options)
+    const res = await fetch('/api/signUp',options)
 
     const data = res.json()
 
@@ -47,6 +50,10 @@ catch(err){
 }
 
    }
+
+
+
+
 
 
 

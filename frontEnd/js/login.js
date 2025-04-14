@@ -1,17 +1,17 @@
 
 
-console.log("Hello")
+console.log("Hello from login")
 
 
-async function validate(event) {
+async function logIn(event) {
 
     event.preventDefault()
 
     try{
 
-        let name = document.getElementById('username').value
+        let email = document.getElementById('email').value
         let password = document.getElementById('password').value
-        let inp_data = {name,password}
+        let inp_data = {email,password}
 
         let options = {
             headers:{"Content-Type":"application/json"},
@@ -19,17 +19,17 @@ async function validate(event) {
             body:JSON.stringify(inp_data)
         }
 
-        const response = await fetch('/api/getUsers',options)
+        const response = await fetch('/api/logIn',options)
         
         const data = await response.json()
         
         
         if(response.status==200){
-            alert("Logged In Success")
-            let logged_in = true
-
-            localStorage.setItem("loggedIn",true)
-            localStorage.setItem('username',name)
+           
+            localStorage.setItem("username",email)
+            
+            console.log(data.message)
+            alert(data.message)
             window.location.href = "/"
         }
 

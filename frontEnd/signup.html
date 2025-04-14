@@ -10,18 +10,18 @@
 
     <div class="container">
 
-        <form onsubmit="signIn(event)">
+        <form onsubmit="signUp(event)">
             <label for="username">Enter Your Username :</label>
-            <input type="text" id="username">
+            <input type="text" id="username" name="username">
             <br>
             <label for="email">Enter Your Email :</label>
-            <input type="text" id="email">
+            <input type="email" id="email" name="email">
             <br>
             <label for="phone">Enter Your Phone Number :</label>
-            <input type="text" id="phone">
+            <input type="text" id="phone" name="phone">
             <br>
             <label for="password">Enter Your password :</label>
-            <input type="text" id="password">
+            <input type="text" id="password" name="password">
             <br>
             <label for="confirm_pass">Confirm your password :</label>
             <input type="text" id="confirm_pass">
@@ -31,6 +31,6 @@
         </form>
     </div>
     
-    <script src="js/signin.js"></script>
+    <script src="js/signUp.js"></script>
 </body>
 </html>

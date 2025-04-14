@@ -22,10 +22,35 @@ async function loadData(){
         });
 
         card.innerHTML = str1
+
+        //welcome messege
+        const username = localStorage.getItem('username')
+       
+       
+
+        if(username){
+
+            //now split the email
+            const ac_username = username.split("@")[0]
+
+            //welome 
+            const welcome_span = document.getElementById('welcome')
+            welcome_span.textContent = `Welcome back ${ac_username}`
+
+            const logIn = document.getElementById('logIn')
+            const signUp =  document.getElementById('signUp')
+
+            //now hide the login and sigup button
+            logIn.style.display = "none"
+            signUp.style.display = "none"
+        }
+
+        localStorage.removeItem('username')
+
         
     }
     catch(error){
-        alert("error loading data")
+        // alert("error loading data")
         console.log(data.error)
     }
 }
