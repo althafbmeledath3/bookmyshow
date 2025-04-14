@@ -4,9 +4,12 @@ let str1 = ""
 
 
 
-
 async function loadData(){
     
+    let signout = document.getElementById('signout')
+    signout.style.display = "none"
+  
+
     try{
 
         const res = await fetch("/api/loadData")
@@ -43,9 +46,11 @@ async function loadData(){
             //now hide the login and sigup button
             logIn.style.display = "none"
             signUp.style.display = "none"
+
+            signout.style.display = "block"
         }
 
-        localStorage.removeItem('username')
+       
 
         
     }
@@ -59,7 +64,15 @@ async function loadData(){
 loadData()
 
 
-// movieBar
+//signout function
+
+function signOut(){
+
+    //delete the name from local storage
+    localStorage.removeItem('username')
+
+    alert("Signing Out")
 
 
-
+    window.location.reload()
+}
